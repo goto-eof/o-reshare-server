@@ -20,6 +20,7 @@ The front-end side is available [here](https://github.com/goto-eof/o-reshare-cli
 - Spring Boot
 - Apache FileUpload2 (Jakarta)
 - Hibernate
+- Liquibase
 - Postgres
 - Docker
 - Lombok
