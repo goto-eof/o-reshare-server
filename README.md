@@ -14,3 +14,14 @@ As is written in the description, O-ReShare is an open source file sharing micro
 objective to encrypt the files selected by a user.
 
 The front-end side is available [here](https://github.com/goto-eof/o-reshare-client)
+
+# Technologies
+- JDK 21
+- Spring Boot
+- Apache FileUpload2 (Jakarta)
+- Hibernate
+- Postgres
+- Docker
+- Lombok
+- MapStruct
+- Gradle
