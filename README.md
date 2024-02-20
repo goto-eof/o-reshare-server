@@ -1,4 +1,4 @@
-
+```
    ___        __      __ _
   /___\      /__\ ___/ _\ |__   __ _ _ __ ___
  //  //____ / \/// _ \ \| '_ \ / _` | '__/ _ \
@@ -6,7 +6,7 @@
 \___/      \/ \_/\___\__/_| |_|\__,_|_|  \___|
 
 ------------------------------------------------
-
+```
 This project consists of a back-end side and a front-end side. The back-end is solely responsible for the storage of the files. While the front-end has as 
 objective to encrypt the files selected by a user.
 
