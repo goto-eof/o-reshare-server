@@ -7,6 +7,9 @@
                                     SERVER
 ------------------------------------------------
 ```
+
+# O-ReShare Server
+
 As is written in the description, O-ReShare is an open source file sharing micro platform enough secure. This project consists of a back-end side and a front-end side. The back-end is solely responsible for the storage of the files. While the front-end has as 
 objective to encrypt the files selected by a user.
 
