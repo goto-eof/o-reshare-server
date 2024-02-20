@@ -7,6 +7,7 @@
 
 ------------------------------------------------
 
-This project consists of a back-end side and a front-end side. The back-end is solely responsible for the storage of the files. While the front-end has as objective to encrypt the files selected by a user.
+This project consists of a back-end side and a front-end side. The back-end is solely responsible for the storage of the files. While the front-end has as 
+objective to encrypt the files selected by a user.
 
 Currently the front-end is not already ready.
