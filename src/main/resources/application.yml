@@ -29,4 +29,4 @@ server:
   port: 8081
 o-reshare:
   files:
-    path: /Users/andrei/Desktop/o-reshare
+    path: /your/path/here/o-reshare

@@ -46,7 +46,7 @@ public class FileRepositoryImpl implements FileRepository {
 
     private void createDirectoriesRecursivelyIfNecessary() {
         if (!(new File(documentsPath).exists()) && !createDirectoriesRecursively()) {
-            throw new ApplicationException("Unable to create directories recursively for files");
+            throw new ApplicationException("Unable to create directories recursively for files: " + documentsPath);
         }
     }
 
