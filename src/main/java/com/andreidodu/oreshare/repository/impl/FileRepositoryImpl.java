@@ -34,10 +34,8 @@ public class FileRepositoryImpl implements FileRepository {
     }
 
     @Override
-    public byte[] retrieveFileContent(String filename) throws IOException {
-        File file = new File(documentsPath + '/' + filename);
-        InputStream in = new FileInputStream(file);
-        return IOUtils.toByteArray(in);
+    public File retrieveFile(String filename) {
+        return new File(documentsPath + '/' + filename);
     }
 
     private Path calculateFileFullPathWithFilename(String filename) {

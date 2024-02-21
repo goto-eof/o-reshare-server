@@ -2,6 +2,7 @@ package com.andreidodu.oreshare.service.impl;
 
 import com.andreidodu.oreshare.constants.FileGroupMetadataConst;
 import com.andreidodu.oreshare.dto.FileGroupMetadataDTO;
+import com.andreidodu.oreshare.dto.StreamInfoDTO;
 import com.andreidodu.oreshare.dto.FileMetadataDTO;
 import com.andreidodu.oreshare.dto.FileUploadRequestDTO;
 import com.andreidodu.oreshare.exception.ApplicationException;
@@ -21,11 +22,9 @@ import org.apache.commons.fileupload2.core.DiskFileItemFactory;
 import org.apache.commons.fileupload2.core.FileItemInput;
 import org.apache.commons.fileupload2.core.FileItemInputIterator;
 import org.apache.commons.fileupload2.jakarta.JakartaServletFileUpload;
-import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 @Slf4j
@@ -60,11 +59,11 @@ public class FileServiceImpl implements FileService {
     }
 
     @Override
-    public ByteArrayResource download(Long fileId) throws IOException {
+    public StreamInfoDTO retrieveFileStreamInfo(Long fileId) throws FileNotFoundException {
         FileMetadata fileMetadata = fileMetadataRepository.findById(fileId)
                 .orElseThrow(() -> new ApplicationException("File not found"));
-        byte[] fileContent = this.fileRepository.retrieveFileContent(fileMetadata.getFilename());
-        return new ByteArrayResource(fileContent);
+        File file = fileRepository.retrieveFile(fileMetadata.getFilename());
+        return new StreamInfoDTO(new FileInputStream(file), file.length(), fileMetadata.getFilename(), file.lastModified());
     }
 
     private FileUploadRequestDTO saveFilesAndExtractMetadata(HttpServletRequest httpServletRequest) {
