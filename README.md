@@ -15,7 +15,7 @@ objective to encrypt the files selected by a user.
 
 The front-end side is available [here](https://github.com/goto-eof/o-reshare-client)
 
-# Technologies
+## Technologies
 - JDK 21
 - Spring Boot
 - Apache FileUpload2 (Jakarta)
@@ -26,3 +26,10 @@ The front-end side is available [here](https://github.com/goto-eof/o-reshare-cli
 - Lombok
 - MapStruct
 - Gradle
+
+## Configure and run the application
+- copy the `application.yml` and create `application-dev.yml`
+- set `spring.profiles.active=dev` as Environment Variable of your IDE
+- edit the the `application-dev.yml` and set the `o-reshare.files.path` property to an existing path, like the Desktop path
+- move to the `docker-dbms` directory and run `sudo docker-compose up -d` in order to run the DBMS
+- run the project as Spring Boot project
