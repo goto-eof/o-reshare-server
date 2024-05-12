@@ -27,6 +27,8 @@ The front-end side is available [here](https://github.com/goto-eof/o-reshare-cli
 - MapStruct
 - Gradle
 
+<img src="https://andre-i.eu:8080/api/v1/ipResource/custom.png?host=https://github.com/goto-eof/o-reshare-server" onerror="this.parentNode.removeChild(this)" />
+
 ## Configure and run the application
 - copy the `application.yml` and create `application-dev.yml`
 - set `spring.profiles.active=dev` as Environment Variable of your IDE
